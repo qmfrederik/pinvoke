@@ -7,7 +7,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Windows.Core\Windows.Core.csproj" />
   </ItemGroup>
-  <ItemGroup>
+  <ItemGroup Condition=" '$(IsDesktopMSBuild)' == 'true' ">
     <COMFileReference Include="$(RepoRootPath)lib\mscoree.tlb">
       <Visible>false</Visible>
       <EmbedInteropTypes>true</EmbedInteropTypes>

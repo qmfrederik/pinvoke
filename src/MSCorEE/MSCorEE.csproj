@@ -8,7 +8,7 @@
     <ProjectReference Include="..\Windows.Core\Windows.Core.csproj" />
     <ProjectReference Include="..\Kernel32\Kernel32.csproj" />
   </ItemGroup>
-  <ItemGroup>
+  <ItemGroup Condition=" '$(IsDesktopMSBuild)' == 'true' ">
     <COMFileReference Include="$(RepoRootPath)lib\metahost.tlb">
       <Visible>false</Visible>
       <EmbedInteropTypes>true</EmbedInteropTypes>
